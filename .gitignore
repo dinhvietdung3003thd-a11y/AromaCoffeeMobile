@@ -1,0 +1,71 @@
+# ========================
+# NODE / EXPO / REACT NATIVE
+# ========================
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Metro bundler cache
+.metro-cache/
+
+# Expo build
+*.apk
+*.aab
+
+# ========================
+# ENV (QUAN TRỌNG)
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# OS FILES
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / EDITOR
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# TYPESCRIPT
+# ========================
+*.tsbuildinfo
+
+# ========================
+# TEST / COVERAGE
+# ========================
+coverage/
+
+# ========================
+# TEMP FILES
+# ========================
+*.log
+*.tmp
+*.temp
+
+# ========================
+# DOCKER
+# ========================
+docker-data/
+*.pid
+
+# ========================
+# OPTIONAL (nếu có backend cùng repo)
+# ========================
+bin/
+obj/
+*.user
+*.suo
+*.csproj.user
