@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import AppSearchBar from "../../components/ui/AppSearchBar";
 import CategoryCard from "../../components/ui/CategoryCard";
 import ProductCard from "../../components/ui/ProductCard";
 import { colors, radius, spacing, typography } from "../../constants/appTheme";
@@ -220,16 +219,6 @@ export default function HomeScreen() {
             <Text style={styles.avatarText}>👤</Text>
           </TouchableOpacity>
         </View>
-
-        <TouchableOpacity activeOpacity={0.95} onPress={goToExplore}>
-          <View pointerEvents="none">
-            <AppSearchBar
-              value=""
-              placeholder="Search drinks"
-              editable={false}
-            />
-          </View>
-        </TouchableOpacity>
 
         <View style={styles.banner}>
           <Text style={styles.bannerSubtitle}>Fresh & tasty every day</Text>
