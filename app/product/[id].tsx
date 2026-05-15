@@ -13,6 +13,7 @@ import {
 } from "react-native";
 import PrimaryButton from "../../components/ui/PrimaryButton";
 import { colors, radius, spacing, typography } from "../../constants/appTheme";
+import { defaultProductImage } from "../../constants/productImages";
 import { addToCart } from "../../services/CartServices";
 import { getProductByIdApi, Product } from "../../services/ProductService";
 
@@ -138,17 +139,11 @@ export default function ProductDetailScreen() {
             <Text style={styles.iconButtonText}>🛒</Text>
           </TouchableOpacity>
 
-          {product.imageUrl ? (
-            <Image
-              source={{ uri: product.imageUrl }}
-              style={styles.productImage}
-              resizeMode="contain"
-            />
-          ) : (
-            <View style={styles.imagePlaceholder}>
-              <Text style={styles.imagePlaceholderText}>No Image</Text>
-            </View>
-          )}
+          <Image
+            source={defaultProductImage}
+            style={styles.productImage}
+            resizeMode="contain"
+          />
         </View>
 
         <View style={styles.infoSection}>
@@ -317,20 +312,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 260,
     marginTop: 40,
-  },
-  imagePlaceholder: {
-    width: "100%",
-    height: 260,
-    marginTop: 40,
-    borderRadius: radius.xl,
-    backgroundColor: colors.surface,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  imagePlaceholderText: {
-    color: colors.textMuted,
-    fontSize: typography.body,
-    fontWeight: "600",
   },
   infoSection: {
     paddingHorizontal: spacing.xl,

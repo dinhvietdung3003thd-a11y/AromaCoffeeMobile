@@ -7,6 +7,7 @@ import {
     View,
 } from "react-native";
 import { colors, radius, shadows, spacing, typography } from "../../constants/appTheme";
+import { defaultProductImage } from "../../constants/productImages";
 
 type ProductCardProps = {
   id: number | string;
@@ -22,7 +23,6 @@ type ProductCardProps = {
 export default function ProductCard({
   name,
   price,
-  imageUrl,
   categoryName,
   isAvailable = true,
   onPress,
@@ -35,13 +35,7 @@ export default function ProductCard({
       onPress={onPress}
     >
       <View style={styles.imageWrap}>
-        {imageUrl ? (
-          <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="contain" />
-        ) : (
-          <View style={styles.imagePlaceholder}>
-            <Text style={styles.imagePlaceholderText}>No Image</Text>
-          </View>
-        )}
+        <Image source={defaultProductImage} style={styles.image} resizeMode="contain" />
       </View>
 
       <View style={styles.content}>
@@ -98,19 +92,6 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-  },
-  imagePlaceholder: {
-    width: "100%",
-    height: "100%",
-    borderRadius: radius.md,
-    backgroundColor: colors.surfaceMuted,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  imagePlaceholderText: {
-    fontSize: typography.bodySmall,
-    color: colors.textMuted,
-    fontWeight: "600",
   },
   content: {
     flex: 1,
