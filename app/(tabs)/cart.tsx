@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import PrimaryButton from "../../components/ui/PrimaryButton";
 import { colors, radius, spacing, typography } from "../../constants/appTheme";
+import { defaultProductImage } from "../../constants/productImages";
 import {
   CartItem,
   getCart,
@@ -91,11 +92,7 @@ export default function CartScreen() {
   const renderItem = ({ item }: { item: CartItem }) => {
     return (
       <View style={styles.itemCard}>
-        {item.imageUrl ? (
-          <Image source={{ uri: item.imageUrl }} style={styles.image} />
-        ) : (
-          <View style={styles.imagePlaceholder} />
-        )}
+        <Image source={defaultProductImage} style={styles.image} />
 
         <View style={styles.info}>
           <Text style={styles.name}>{item.name}</Text>
@@ -204,12 +201,6 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: radius.md,
-  },
-  imagePlaceholder: {
-    width: 70,
-    height: 70,
-    borderRadius: radius.md,
-    backgroundColor: colors.surfaceMuted,
   },
   info: {
     flex: 1,

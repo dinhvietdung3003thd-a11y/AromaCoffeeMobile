@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import {
     ActivityIndicator,
     Alert,
+    Image,
     SafeAreaView,
     ScrollView,
     StyleSheet,
@@ -12,6 +13,7 @@ import {
 } from "react-native";
 import PrimaryButton from "../../components/ui/PrimaryButton";
 import { colors, radius, spacing, typography } from "../../constants/appTheme";
+import { defaultProductImage } from "../../constants/productImages";
 import { getToken } from "../../services/AuthServices";
 import { addManyToCart } from "../../services/CartServices";
 import { API_BASE_URL } from "../../services/api";
@@ -281,9 +283,7 @@ export default function OrderDetailScreen() {
                   ]}
                 >
                   <View style={styles.itemLeft}>
-                    <View style={styles.itemImagePlaceholder}>
-                      <Text style={styles.itemImageText}>☕</Text>
-                    </View>
+                    <Image source={defaultProductImage} style={styles.itemImage} />
 
                     <View style={styles.itemTextWrap}>
                       <Text style={styles.itemName} numberOfLines={1}>
@@ -475,17 +475,11 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: spacing.md,
   },
-  itemImagePlaceholder: {
+  itemImage: {
     width: 54,
     height: 54,
     borderRadius: 16,
-    backgroundColor: "#EEF7F1",
-    alignItems: "center",
-    justifyContent: "center",
     marginRight: spacing.md,
-  },
-  itemImageText: {
-    fontSize: 22,
   },
   itemTextWrap: {
     flex: 1,
