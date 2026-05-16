@@ -51,6 +51,13 @@ Dự án được xây dựng theo hướng tách biệt giữa Frontend và Bac
 
 ---
 
+# Thành viên nhóm
+Đinh Việt Dũng - 23810310370
+Nguyễn Xuân Đạt - 23810310361
+Vũ Tiến Mạnh -23810310375
+
+---
+
 # Chức năng chính của ứng dụng
 
 ## Xác thực người dùng
