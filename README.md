@@ -60,11 +60,11 @@ Vũ Tiến Mạnh -23810310375
 
 # Phân công nhiệm vụ
 
-| Thành viên | Công việc phụ trách |
-|---|---|
-| Vũ Tiến Mạnh | Xây dựng giao diện mobile bằng React Native, kết nối API Backend |
-| Đinh Việt Dũng | Thiết kế Backend ASP.NET Core Web API, xử lý JWT Authentication |
-| Nguyễn Xuân Đạt | Thiết kế cơ sở dữ liệu MySQL, Docker và kiểm thử hệ thống |
+| Thành viên | Công việc phụ trách | Mức độ đóng góp |
+|---|---|---|
+| Vũ Tiến Mạnh | Xây dựng giao diện mobile bằng React Native, kết nối API Backend | 32% |
+| Đinh Việt Dũng | Thiết kế Backend ASP.NET Core Web API, xử lý JWT Authentication | 36% |
+| Nguyễn Xuân Đạt | Thiết kế cơ sở dữ liệu MySQL, Docker và kiểm thử hệ thống | 32% |
 
 ---
 
